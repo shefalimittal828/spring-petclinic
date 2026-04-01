@@ -10,11 +10,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-               bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar"
-            }
-         }
-                contextPath: '',
-                war: 'target/*.jar'
+                // This runs the executable JAR directly
+                bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar"
             }
         }
     }
