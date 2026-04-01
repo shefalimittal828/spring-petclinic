@@ -12,7 +12,7 @@ pipeline {
             steps {
                bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar"
             }
-         },
+         }
                 contextPath: null,
                 war: 'target/*.jar'
             }
