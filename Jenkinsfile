@@ -8,13 +8,11 @@ pipeline {
             }
         }
 
-        stage('Deploy to Tomcat') {
+        stage('Deploy') {
             steps {
-                deploy adapters: [tomcat9(
-                    credentialsId: 'tomcat_id',
-                    path: '',
-                    url: 'http://localhost:8080'
-                )],
+               bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar"
+            }
+         },
                 contextPath: null,
                 war: 'target/*.jar'
             }
