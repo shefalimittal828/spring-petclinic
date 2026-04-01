@@ -16,7 +16,7 @@ pipeline {
                     url: 'http://localhost:8080'
                 )],
                 contextPath: null,
-                war: 'target/*.war'
+                war: 'target/*.jar'
             }
         }
     }
