@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 deploy adapters: [tomcat9(
-                    credentialsId: 'tomcat-cred',
+                    credentialsId: 'tomcat_id',
                     path: '',
                     url: 'http://localhost:8080'
                 )],
