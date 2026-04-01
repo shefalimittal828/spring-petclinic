@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // This runs the executable JAR directly
-                bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar --server.port=9091"
+                bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar --server.port=9095"
             }
         }
     }
