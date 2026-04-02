@@ -9,9 +9,10 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                // This runs the executable JAR directly
-                bat "java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar --server.port=9095"
+           steps {
+               echo 'Deploying PetClinic to Background Process...'
+               // "start /B" launches the JAR in a separate background process
+               bat "start /B java -jar target/spring-petclinic-4.0.0-SNAPSHOT.jar --server.port=9095"
             }
         }
     }
